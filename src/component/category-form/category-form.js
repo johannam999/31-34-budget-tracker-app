@@ -3,7 +3,7 @@ import autoBind from './../../utils/main';
 import PropTypes from 'prop-types'; // this added
 
 const defaultState = {
-  name:'', // this si UI state so we dont need id and createOn
+  name:'',
   budget:'',
 };
 class CategoryForm extends React.Component {
