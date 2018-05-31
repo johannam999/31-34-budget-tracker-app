@@ -23,6 +23,7 @@ class CategoryItem extends React.Component {
     return (
       <div className='category' key={key}>
         <h1> { category.name } </h1>
+        <h1> { category.budget } </h1>
         <button onClick={() => categoryRemove(category)}> Delete </button>
         <CategoryForm category={category} onComplete={categoryUpdate}/>
         <ExpenseForm category={category} onComplete={expenseCreate} />

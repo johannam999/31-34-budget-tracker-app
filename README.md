@@ -15,7 +15,7 @@ This app lets the user input data to create category names and budget related to
 5. Reducer should contain  the following:
   * `CATEGORY_CREATE`
   * `CATEGORY_UPDATE`
-  * `CATEGORY_DESTORY`
+  * `CATEGORY_DESTROY`
   
 6. Actions file needs to create actions for all the interactions added to reducer.
 7. Create following files to hold components for: dashboard, category form, category item, and app.
@@ -28,14 +28,17 @@ This app lets the user input data to create category names and budget related to
            CategoryForm  -- for updating categories```
 8. Connect some components with action file. 
 9. Create routes inside app file.
-10. Make sure Dashboard displays on the'/' route and connects to map state and dispatchable methods to props.
+10. Make sure Dashboard displays on the'/' route and connects to map state and dispatch methods to props.
 11. Add CategoryForm and CategoryItem to render() function.
 12. Add the UI state inside the CategoryForm and pass it to CategoryItem.
 13. Use onComplete function to invoke when the form gets submitted.
 14. Made sure CategoryItem renders and displays name and budget. 
 15. Import Category prop from Dashboard to display: delete 'onClick' button and update 'onComplete' button.
-14. Render all the components into HTML.
-8. Change scss file accordingly.
+16. Add Expense component that takes name and price as user input and adds timestamp, id. Link Expense to Category component to display expense in relation to specific Category. Also when deleting category we want to remove expenses that are related to Category component.
+17. Add expense reducer and link both reducers:category and expense into on - main.js.
+18. Create an action file for each interaction by expense component.
+19. Render all the components into HTML.
+20. Change scss file accordingly.
 
 
 ## Architecture

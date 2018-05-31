@@ -28,7 +28,6 @@ export default class ExpenseForm extends React.Component {
       categoryId,
     });
     this.setState(emptyState);
-  // reset state to default
   }
 
   render() {

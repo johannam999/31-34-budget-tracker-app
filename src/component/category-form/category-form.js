@@ -1,11 +1,12 @@
 import React from 'react';
 import autoBind from './../../utils/main';
-import PropTypes from 'prop-types'; // this added
+import PropTypes from 'prop-types';
 
 const defaultState = {
   name:'',
   budget:'',
 };
+
 class CategoryForm extends React.Component {
   constructor(props) {
     super(props);
@@ -22,12 +23,6 @@ class CategoryForm extends React.Component {
     this.props.onComplete(this.state);
   }
 
-  // static getDerivedStateFromProps(nextProps) {
-  //   if (nextProps.category) {
-  //     return nextProps.category;
-  //   }
-  //   return defaultState;
-  // }
   render(){
     const buttonText = this.props.category ? 'Update' : 'Create';
     return(
