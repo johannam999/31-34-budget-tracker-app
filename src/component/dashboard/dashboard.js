@@ -9,17 +9,19 @@ import CategoryItem from '../category-item/category-item';
 class Dashboard extends React.Component {
   render() {
     const {categories, categoryCreate} = this.props;
-    return(<div className='dashboard'>
+    return(
+    <div className='dashboard'>
      <CategoryForm onComplete={categoryCreate}/>
-        {
-          categories.map((currentCategory, i) => <CategoryItem category={currentCategory} key={i}/>)
-        }
+        { categories.categories ? 
+          categories.categories.map((currentCategory, i) => <CategoryItem category={currentCategory} key={i}/>)
+          : undefined
+       }
       </div>
     );
   }
 }
 Dashboard.propTypes = {
-  categories: PropTypes.array,
+  categories: PropTypes.object,
   categoryCreate: PropTypes.func,
 };
 
