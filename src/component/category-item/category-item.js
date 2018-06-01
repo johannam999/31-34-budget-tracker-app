@@ -21,11 +21,12 @@ class CategoryItem extends React.Component {
 
     const categoryExpenses = expenses[category.id];
     return (
-      <div className='category' key={key}>
+      <div className='category' className='divColor' key={key}>
         <h1> { category.name } </h1>
         <h1> { category.budget } </h1>
         <button onClick={() => categoryRemove(category)}> Delete </button>
         <CategoryForm category={category} onComplete={categoryUpdate}/>
+  
         <ExpenseForm category={category} onComplete={expenseCreate} />
         <div className='expense-list'>
     {categoryExpenses.map(expense => <Expense expense={expense} key={expense.id} />)}

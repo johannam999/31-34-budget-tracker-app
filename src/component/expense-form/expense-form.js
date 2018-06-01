@@ -31,6 +31,7 @@ export default class ExpenseForm extends React.Component {
   }
 
   render() {
+    const criticalExpense = (this.state.price > 100) ? 'redExpense' : undefined;
     const { expense } = this.props;
     const buttonText = expense ? 'Update Expense' : 'Create expense';
     return (
@@ -43,7 +44,7 @@ export default class ExpenseForm extends React.Component {
           value={this.state.name}
           onChange={this.handleChange}
         />
-        <input 
+        <input className={criticalExpense} 
         type='number'
         name='price'
         placeholder="price"

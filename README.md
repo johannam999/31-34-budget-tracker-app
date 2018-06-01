@@ -39,14 +39,18 @@ This app lets the user input data to create category names and budget related to
 18. Create an action file for each interaction by expense component.
 19. Render all the components into HTML.
 20. Change scss file accordingly.
+21. Add local storage with redux-session.js.
+22. Add actions and error logs in redux-reporter.js.
+23. Add test files.
+
 
 
 ## Architecture
-JavaScript, Node.js, Airbnb package, babel, Sass, React, Enzyme, Jest, other dependencies
+JavaScript, Node.js, Airbnb package, webpack babel, Sass, React, Redux, Enzyme, Jest, other dependencies
 
 ## Change Log
 
-05-12-2018 6:00pm - The application is finished.
+05-12-2018 5:00pm - The application is finished.
 05-12-2018 10:30pm - Finished writing README.md
 
 

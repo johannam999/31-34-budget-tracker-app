@@ -12,7 +12,7 @@ class Expense extends React.Component {
       <div className='expense'>
         <h2> {expense.name}</h2>
         <h3> {expense.price}</h3>
-        <button onClick={() => expenseRemove(expense)}>Delete</button>
+        <button onClick={() => expenseRemove(expense)}> Delete</button>
         <ExpenseForm
           expense={expense}
           onComplete={expenseUpdate}

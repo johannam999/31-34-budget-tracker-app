@@ -47,9 +47,19 @@ webpackConfig.module.rules = [
   {
     test: /\.scss$/,
     use: [
-      MiniCssPlugin.loader,
+      // MiniCssPlugin.loader, // for production 
+      'style-loader', // for hot reload 
       'css-loader',
       'sass-loader',
     ],
+ 
   },
+  // {
+  //   test: /\.scss$/,
+  //   use: [
+  //     MiniCssPlugin.loader,
+  //     'css-loader',
+  //     'sass-loader',
+  //   ],
+  // },
 ];

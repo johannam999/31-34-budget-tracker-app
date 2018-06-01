@@ -11,12 +11,12 @@ class Dashboard extends React.Component {
     const { categories, categoryCreate } = this.props;
     return (
     <div className='dashboard'>
-     <CategoryForm onComplete={categoryCreate}/>
-        { categories.categories ? 
-          categories.categories.map((currentCategory, i) => 
-          <CategoryItem category={currentCategory} key={i}/>)
-          : undefined
-       }
+      <CategoryForm onComplete={categoryCreate}/>
+      { categories.categories ? 
+        categories.categories.map((currentCategory, i) => 
+        <CategoryItem className='divColor' category={currentCategory} key={i}/>)
+        : undefined
+        }
       </div>
     );
   }

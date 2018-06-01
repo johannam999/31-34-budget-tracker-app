@@ -1,10 +1,11 @@
 import React from 'react';
-import autoBind from './../../utils/main';
 import PropTypes from 'prop-types';
+import autoBind from './../../utils/main';
+
 
 const defaultState = {
-  name:'',
-  budget:'',
+  name: '',
+  budget: '',
 };
 
 class CategoryForm extends React.Component {
@@ -16,16 +17,17 @@ class CategoryForm extends React.Component {
 
   handleChange(event) {
     const { name, value } = event.target;
-    this.setState({[name]: value});
+    this.setState({ [name]: value });
   }
   handleSubmit(event) {
     event.preventDefault();
     this.props.onComplete(this.state);
   }
 
-  render(){
+  render() {
     const buttonText = this.props.category ? 'Update' : 'Create';
-    return(
+    const clickColor = this.props.category ? 'updateColor' : undefined;
+    return (
       <form
       onSubmit={this.handleSubmit}
       className='category-form'>
@@ -33,7 +35,7 @@ class CategoryForm extends React.Component {
       type='text'
       name='name'
       placeholder='name'
-      value={this.state.category}
+      value={this.state.name}
       onChange={this.handleChange}
       />
        <input
@@ -43,7 +45,7 @@ class CategoryForm extends React.Component {
       value={this.state.budget}
       onChange={this.handleChange}
       />
-      <button type='submit'>{buttonText} Category</button>
+      <button className={clickColor} type='submit'>{buttonText} Category</button>
       </form>
     );
   }
