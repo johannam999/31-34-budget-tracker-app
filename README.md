@@ -34,8 +34,8 @@ This app lets the user input data to create category names and budget related to
 13. Use onComplete function to invoke when the form gets submitted.
 14. Made sure CategoryItem renders and displays name and budget. 
 15. Import Category prop from Dashboard to display: delete 'onClick' button and update 'onComplete' button.
-14. Render all the components into HTML.
-8. Change scss file accordingly.
+16. Render all the components into HTML.
+17. Change scss file accordingly.
 
 
 ## Architecture

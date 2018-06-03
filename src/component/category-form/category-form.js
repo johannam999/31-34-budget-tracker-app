@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import autoBind from './../../utils/main';
-import PropTypes from 'prop-types'; // this added
+
 
 const defaultState = {
-  name:'',
-  budget:'',
+  name: '',
+  budget: '',
 };
 class CategoryForm extends React.Component {
   constructor(props) {
@@ -15,16 +16,16 @@ class CategoryForm extends React.Component {
 
   handleChange(event) {
     const { name, value } = event.target;
-    this.setState({[name]: value});
+    this.setState({ [name]: value });
   }
   handleSubmit(event) {
     event.preventDefault();
     this.props.onComplete(this.state);
   }
 
-  render(){
+  render() {
     const buttonText = this.props.category ? 'Update' : 'Create';
-    return(
+    return (
       <form
       onSubmit={this.handleSubmit}
       className='category-form'>
