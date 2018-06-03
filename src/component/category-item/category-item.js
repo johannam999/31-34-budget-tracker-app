@@ -34,7 +34,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     categoryRemove: data => dispatch(categoryActions.remove(data)),
     categoryUpdate: data => dispatch(categoryActions.update(data)),
-  }
-}
+  };
+};
 
 export default connect(null, mapDispatchToProps)(CategoryItem);

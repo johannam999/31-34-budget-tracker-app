@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Dashboard from './../dashboard/dashboard';
-// import '../../styles/main.scss';
 
 class App extends React.Component {
   render() {
@@ -13,8 +12,9 @@ class App extends React.Component {
           </div>
         </BrowserRouter>
       </div>
-    )
+    );
   }
 }
 
-export default App; 
+export default App;
+
